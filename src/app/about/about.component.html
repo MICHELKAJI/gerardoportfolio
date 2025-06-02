@@ -1,0 +1,40 @@
+<div id='about' class="flex flex-col md:flex-row items-center justify-center gap-40 px-20 py-16 h-[90vh] animate-fade-in">
+    <!-- Left: Image -->
+    <div class="relative w-[100rem] h-[40rem] md:w-80 md:h-80">
+      <div class="absolute inset-0 rounded-full bg-orange-400 opacity-30 scale-110 z-0"></div>
+      <img
+        src="/images/gerardo.jpeg"
+        alt="Gerardo"
+        class="relative z-10 object-cover w-full h-full rounded-full"
+      />
+    </div>
+  
+    <!-- Right: Text and skills -->
+    <div class="w-full md:w-1/2 space-y-6">
+      <h2 class="text-3xl font-bold text-gray-800">About Me</h2>
+      <p class="text-gray-600">
+        Passionné par le design et le développement web, je conçois des expériences numériques à la fois esthétiques, intuitives et performantes. Mon approche hybride UI/UX et développement me permet de donner vie à des interfaces qui allient ergonomie, clarté et impact visuel.
+
+        Fort d’une solide expérience en création de sites responsives, d’applications web modernes et de maquettes interactives, je maîtrise aussi bien les outils de conception (Figma, Adobe XD) que les technologies frontend (Angular, React, TailwindCSS). 
+
+        Toujours à l’écoute des utilisateurs, je m’efforce de créer des produits qui répondent à de vrais besoins, en équilibrant design fonctionnel et innovation technique. Mon objectif : transformer chaque projet en une expérience fluide, cohérente et mémorable.
+
+      </p>
+  
+      <!-- Skills -->
+      <div class="space-y-4">
+        <ng-container *ngFor="let skill of skills">
+          <div>
+            <p class="font-semibold text-gray-700 mb-1">{{ skill.name }}</p>
+            <div class="w-full bg-gray-200 h-2 rounded">
+              <div
+                class="bg-orange-500 h-2 rounded transition-all duration-1000"
+                [style.width.%]="skill.level"
+              ></div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

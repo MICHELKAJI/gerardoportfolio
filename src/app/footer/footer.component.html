@@ -1,0 +1,43 @@
+<footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Logo + Description -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-orange-400">Gerardo</h3>
+        <p class="text-sm text-gray-400">
+          Développeur passionné par la création d'expériences numériques modernes et performantes.
+        </p>
+        <div class="flex gap-4 mt-4">
+          <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+  
+      <!-- Liens utiles -->
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Liens</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li (click)="scrollTo('home')" class="hover:text-orange-400 transition cursor-pointer">À propos</li>
+          <li (click)="scrollTo('service')" class="hover:text-orange-400 transition cursor-pointer">Services</li>
+          <li (click)="scrollTo('project')" class="hover:text-orange-400 transition cursor-pointer">Projets</li>
+          <li (click)="scrollTo('contact')" class="hover:text-orange-400 transition cursor-pointer">Contact</li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Kinshasa, RDC</li>
+          <li><i class="fas fa-envelope mr-2"></i> tangogerard890&#64;gmail.com</li>
+          <li><i class="fas fa-phone-alt mr-2"></i> +243 974399729</li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+      &copy; {{ currentYear }} Gerardo. Tous droits réservés.
+    </div>
+  </footer>
+  
