@@ -1,6 +1,9 @@
 import { NgFor } from '@angular/common';
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-service',
@@ -44,4 +47,5 @@ export class ServiceComponent  implements AfterViewInit {
       ease: 'power2.out',
     });
   }
+  
 }

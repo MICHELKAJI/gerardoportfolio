@@ -1,21 +1,47 @@
-<header [ngClass]="isScrolled? 'fixed top-0 left-0 w-full bg-gray-900 px-20 py-5 z-50' : 'fixed top-0 left-0 w-full bg-transparent px-20 py-5 z-50' ">
-    <div class="flex flex-row justify-between items-center text-white" >
+<div>
+  <!-- HEADER DESKTOP -->
+  <header
+    [ngClass]="isScrolled ? 'hidden md:block fixed top-0 left-0 w-full bg-gray-900 px-20 py-5 z-50' : 'hidden md:block fixed top-0 left-0 w-full bg-transparent px-20 py-5 z-50'">
+    <div class="flex justify-between items-center text-white">
       <h1 class="text-2xl font-bold">
-        <span class="text-primary bg-amber-300 px-1">G</span><span>erardo</span>
+        <span class="bg-amber-300 px-1 text-black">G</span><span>erardo</span>
       </h1>
-  
-      <nav class="flex flex-row items-center space-x-20">
-        <ul class="flex flex-row space-x-10">
+
+      <nav class="flex items-center space-x-20">
+        <ul class="flex space-x-10">
           <li (click)="scrollTo('home')" class="cursor-pointer hover:text-gray-300">Accueil</li>
           <li (click)="scrollTo('about')" class="cursor-pointer hover:text-gray-300">À propos</li>
           <li (click)="scrollTo('service')" class="cursor-pointer hover:text-gray-300">Services</li>
           <li (click)="scrollTo('project')" class="cursor-pointer hover:text-gray-300">Projets</li>
           <li (click)="scrollTo('contact')" class="cursor-pointer hover:text-gray-300">Contact</li>
         </ul>
-        <button class="bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
+        <a
+          href="/assets/cv.pdf"
+          download
+          class="bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
           Télécharger CV
-        </button>
+        </a>
       </nav>
     </div>
   </header>
-  
+
+  <!-- HEADER MOBILE -->
+  <div
+    [ngClass]="isScrolled ? 'fixed block md:hidden w-full shadow-2xl bg-slate-900 transition duration-300 z-10' : 'fixed block md:hidden w-full bg-white bg-opacity-20 z-10'">
+    <div class="flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">
+        <span class="bg-amber-300 px-1 text-white">G</span><span class="text-white">erardo</span>
+      </h1>
+
+      <button (click)="modale.showModal()" class="p-2 focus:outline-none">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- MODALE MOBILE -->
+    <app-modale #modale></app-modale>
+  </div>
+</div>

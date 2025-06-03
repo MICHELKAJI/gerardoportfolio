@@ -1,0 +1,44 @@
+<!-- Overlay -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-40" (click)="closeModal()" [ngClass]="{'hidden': !isVisible}"></div>
+
+<!-- Menu Burger -->
+<div #modal class="fixed top-0 left-0-0 w-64 h-full bg-white z-50 shadow-lg flex flex-col justify-between" [ngClass]="{'hidden': !isVisible}" >
+  <!-- Menu principal -->
+  <div class="p-6">
+    <h2 class="text-2xl font-bold mb-20">
+      <span class="bg-amber-300 text-black px-1">G</span><span>erardo</span>
+    </h2>
+
+    <ul class="space-y-4">
+      <li (click)="scrollTo('home'); closeModal()" class="cursor-pointer hover:text-amber-500">Accueil</li>
+      <li (click)="scrollTo('about'); closeModal()" class="cursor-pointer hover:text-amber-500">À propos</li>
+      <li (click)="scrollTo('service'); closeModal()" class="cursor-pointer hover:text-amber-500">Services</li>
+      <li (click)="scrollTo('project'); closeModal()" class="cursor-pointer hover:text-amber-500">Projets</li>
+      <li (click)="scrollTo('contact'); closeModal()" class="cursor-pointer hover:text-amber-500">Contact</li>
+    </ul>
+
+    <a
+      href="/assets/cv.pdf"
+      download
+      class="mt-6 inline-block bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
+      Télécharger CV
+    </a>
+  </div>
+
+  <!-- Réseaux sociaux -->
+  <div class="p-4 flex justify-center space-x-4 border-t">
+    <a href="https://github.com/tonprofil" target="_blank" aria-label="GitHub">
+      <svg class="w-6 h-6 text-gray-700 hover:text-black" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M12 0.5C5.5 0.5 0.5 5.5 0.5 12C0.5 17 3.9 21.2 8.5 22.5C9 22.6 9.2 22.3 9.2 22V19.9C6 20.6 5.2 18.8 5.2 18.8C4.7 17.6 4 17.3 4 17.3C3 16.7 4.1 16.7 4.1 16.7C5.2 16.8 5.8 17.8 5.8 17.8C6.8 19.4 8.4 19 9.1 18.7C9.2 18 9.5 17.5 9.9 17.2C7.2 16.9 4.3 15.9 4.3 11.3C4.3 10 4.8 8.9 5.6 8C5.5 7.7 5.1 6.5 5.7 4.9C5.7 4.9 6.8 4.6 9.2 6.1C10.2 5.8 11.3 5.7 12.3 5.7C13.3 5.7 14.4 5.8 15.4 6.1C17.8 4.6 18.9 4.9 18.9 4.9C19.5 6.5 19.1 7.7 19 8C19.8 8.9 20.3 10 20.3 11.3C20.3 15.9 17.4 16.9 14.7 17.2C15.2 17.6 15.7 18.4 15.7 19.7V22C15.7 22.3 15.9 22.6 16.4 22.5C21.1 21.2 24.5 17 24.5 12C24.5 5.5 19.5 0.5 12 0.5Z">
+        </path>
+      </svg>
+    </a>
+    <a href="https://linkedin.com/in/tonprofil" target="_blank" aria-label="LinkedIn">
+      <svg class="w-6 h-6 text-gray-700 hover:text-blue-700" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 4.98 2.12 4.98 3.5ZM0 24V7.5H5V24H0ZM8 7.5H13V10H13.08C13.8 8.8 15.3 7.5 17.7 7.5C22 7.5 24 10.3 24 14.5V24H19V15.5C19 13.5 18.5 12 16.9 12C15.3 12 14.5 13.3 14.5 15.2V24H9.5V7.5H8Z" />
+      </svg>
+    </a>
+  </div>
+</div>

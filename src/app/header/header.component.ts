@@ -2,13 +2,15 @@ import { NgClass } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ModaleComponent } from '../modale/modale.component';
+
 
 gsap.registerPlugin(ScrollToPlugin);
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ NgClass],
+  imports: [ NgClass, ModaleComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
