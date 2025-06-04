@@ -2,22 +2,29 @@ import { NgClass } from '@angular/common';
 import { Component, Output, EventEmitter, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import gsap from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-modale',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './modale.component.html',
   styleUrl: './modale.component.css'
 })
 export class ModaleComponent implements OnInit {
   @ViewChild('modal') modal!: ElementRef;
   @Output() closeModalEvent = new EventEmitter<void>();
-  @ViewChild('box') box!:ElementRef
+  @ViewChild('box') box!: ElementRef;
 
   isVisible = false;
+  formData = {
+    name: '',
+    email: '',
+    message: ''
+  };
 
   constructor(private http: HttpClient) {}
 
@@ -51,6 +58,23 @@ export class ModaleComponent implements OnInit {
     } else {
       this.isVisible = false;
       this.closeModalEvent.emit();
+    }
+  }
+
+  async onSubmit() {
+    try {
+      // Ici, vous pouvez ajouter la logique pour envoyer le formulaire
+      console.log('Formulaire soumis:', this.formData);
+      // Réinitialiser le formulaire
+      this.formData = {
+        name: '',
+        email: '',
+        message: ''
+      };
+      // Fermer le modal
+      this.closeModal();
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi du formulaire:', error);
     }
   }
 

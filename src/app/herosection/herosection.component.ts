@@ -1,11 +1,13 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import gsap from 'gsap';
+import { ContactmodaleComponent } from '../contactmodale/contactmodale.component';
+
 
 @Component({
   selector: 'app-herosection',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ContactmodaleComponent],
   templateUrl: './herosection.component.html',
   styleUrl: './herosection.component.css'
 })

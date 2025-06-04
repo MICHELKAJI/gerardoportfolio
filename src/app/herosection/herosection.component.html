@@ -8,9 +8,10 @@
             <p class="mb-10">
                 Développeur web & designer UI/UX,<br/> je crée des solutions digitales performantes et orientées utilisateur.
             </p>
-            <button class="bg-amber-300 py-2 px-10 font-bold rounded-full hover:bg-amber-600 transition duration-300">
+            <button (click)="modalecontact.showModal()" class="bg-amber-300 py-2 px-10 font-bold rounded-full hover:bg-amber-600 transition duration-300">
                 Contact Me
             </button>
         </div>
     </div>
+    <app-contactmodale #modalecontact></app-contactmodale>
 </section>
