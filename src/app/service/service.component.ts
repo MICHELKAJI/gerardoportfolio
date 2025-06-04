@@ -16,22 +16,22 @@ export class ServiceComponent  implements AfterViewInit {
   services = [
     {
       title: 'UI/UX',
-      icon: 'assets/icons/uiux.svg',
+      icon: '/images/uiux.png',
       description: 'Création d’expériences utilisateurs intuitives et esthétiques.',
     },
     {
       title: 'Web Design',
-      icon: 'assets/icons/webdesign.svg',
+      icon: '/images/web.png',
       description: 'Design responsive et adapté à tous les supports.',
     },
     {
       title: 'App Design',
-      icon: 'assets/icons/appdesign.svg',
+      icon: '/images/app.png',
       description: 'Interfaces mobiles modernes et performantes.',
     },
     {
       title: 'Graphic Design',
-      icon: 'assets/icons/graphicdesign.svg',
+      icon: '/images/graphic.png',
       description: 'Création visuelle, branding et supports de communication.',
     },
   ];

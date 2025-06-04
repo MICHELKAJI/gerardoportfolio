@@ -30,9 +30,14 @@ export class ProjectComponent implements AfterViewInit {
       image: '/images/Sparkcode.PNG',
     },
     {
-      title: 'Branding Poster',
+      title: 'Offre d\'emploi',
       category: 'Graphic Design',
-      image: '/images/style.PNG',
+      image: '/images/dumiya recrute.jpg',
+    },
+    {
+      title: 'Télephone',
+      category: 'Graphic Design',
+      image: '/images/SPARK 30C.jpg',
     },
     // Ajoute autant de projets que tu veux...
   ];
