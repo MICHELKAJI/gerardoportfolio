@@ -1,24 +1,24 @@
 <div>
   <!-- HEADER DESKTOP -->
   <header
-    [ngClass]="isScrolled ? 'hidden md:block fixed top-0 left-0 w-full bg-gray-900 px-20 py-5 z-50' : 'hidden md:block fixed top-0 left-0 w-full bg-transparent px-20 py-5 z-50'">
+    [ngClass]="isScrolled ? 'hidden lg:block fixed top-0 left-0 w-full bg-gray-900 px-8 sm:px-12 lg:px-20 py-4 sm:py-5 z-50' : 'hidden lg:block fixed top-0 left-0 w-full bg-transparent px-8 sm:px-12 lg:px-20 py-4 sm:py-5 z-50'">
     <div class="flex justify-between items-center text-white">
-      <h1 class="text-2xl font-bold">
+      <h1 class="text-xl sm:text-2xl font-bold">
         <span class="bg-amber-300 px-1 text-black">G</span><span>erardo</span>
       </h1>
 
-      <nav class="flex items-center space-x-20">
-        <ul class="flex space-x-10">
-          <li (click)="scrollTo('home')" class="cursor-pointer hover:text-gray-300">Accueil</li>
-          <li (click)="scrollTo('about')" class="cursor-pointer hover:text-gray-300">À propos</li>
-          <li (click)="scrollTo('service')" class="cursor-pointer hover:text-gray-300">Services</li>
-          <li (click)="scrollTo('project')" class="cursor-pointer hover:text-gray-300">Projets</li>
-          <li (click)="scrollTo('contact')" class="cursor-pointer hover:text-gray-300">Contact</li>
+      <nav class="flex items-center space-x-8 sm:space-x-12 lg:space-x-20">
+        <ul class="flex space-x-6 sm:space-x-8 lg:space-x-10">
+          <li (click)="scrollTo('home')" class="cursor-pointer hover:text-gray-300 text-sm sm:text-base">Accueil</li>
+          <li (click)="scrollTo('about')" class="cursor-pointer hover:text-gray-300 text-sm sm:text-base">À propos</li>
+          <li (click)="scrollTo('service')" class="cursor-pointer hover:text-gray-300 text-sm sm:text-base">Services</li>
+          <li (click)="scrollTo('project')" class="cursor-pointer hover:text-gray-300 text-sm sm:text-base">Projets</li>
+          <li (click)="scrollTo('contact')" class="cursor-pointer hover:text-gray-300 text-sm sm:text-base">Contact</li>
         </ul>
         <a
-          href="/assets/cv.pdf"
+          href="/images/CV_2025-06-02_Gérard_Tukia.pdf"
           download
-          class="bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
+          class="bg-amber-300 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded hover:bg-amber-600 transition">
           Télécharger CV
         </a>
       </nav>
@@ -27,14 +27,14 @@
 
   <!-- HEADER MOBILE -->
   <div
-    [ngClass]="isScrolled ? 'fixed block md:hidden w-full shadow-2xl bg-slate-900 transition duration-300 z-10' : 'fixed block md:hidden w-full bg-white bg-opacity-20 z-10'">
-    <div class="flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">
+    [ngClass]="isScrolled ? 'fixed block lg:hidden w-full shadow-2xl bg-slate-900 transition duration-300 z-10' : 'fixed block lg:hidden w-full bg-white bg-opacity-20 z-10'">
+    <div class="flex justify-between items-center p-3 sm:p-4">
+      <h1 class="text-xl sm:text-2xl font-bold">
         <span class="bg-amber-300 px-1 text-white">G</span><span class="text-white">erardo</span>
       </h1>
 
       <button (click)="modale.showModal()" class="p-2 focus:outline-none">
-        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
+        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
