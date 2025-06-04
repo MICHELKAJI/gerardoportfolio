@@ -17,12 +17,9 @@
       <li (click)="scrollTo('contact'); closeModal()" class="cursor-pointer hover:text-amber-500">Contact</li>
     </ul>
 
-    <a
-      href="/images/CV_2025-06-02_Gérard_Tukia.pdf"
-      download
-      class="mt-6 inline-block bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
+    <button (click)="downloadCV()" class="mt-6 inline-block bg-amber-300 text-white px-4 py-2 rounded hover:bg-amber-600 transition">
       Télécharger CV
-    </a>
+    </button>
   </div>
 
   <!-- Réseaux sociaux -->

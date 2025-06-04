@@ -1,20 +1,29 @@
 import { NgClass } from '@angular/common';
-import { Component, Output, EventEmitter, ElementRef, ViewChild,  } from '@angular/core';
+import { Component, Output, EventEmitter, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-modale',
   standalone: true,
-  imports: [NgClass],
+  imports: [CommonModule],
   templateUrl: './modale.component.html',
   styleUrl: './modale.component.css'
 })
-export class ModaleComponent {
+export class ModaleComponent implements OnInit {
   @ViewChild('modal') modal!: ElementRef;
   @Output() closeModalEvent = new EventEmitter<void>();
   @ViewChild('box') box!:ElementRef
 
   isVisible = false;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 
   showModal() {
     this.isVisible = true;
@@ -42,6 +51,25 @@ export class ModaleComponent {
     } else {
       this.isVisible = false;
       this.closeModalEvent.emit();
+    }
+  }
+
+  async downloadCV() {
+    try {
+      const response = await this.http.get('/images/CV_2025-06-02_Gérard_Tukia.pdf', { responseType: 'blob' }).toPromise();
+      if (response) {
+        const blob = new Blob([response], { type: 'application/pdf' });
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'CV_Gerardo_Tukia.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }
+    } catch (error) {
+      console.error('Erreur lors du téléchargement:', error);
     }
   }
 
