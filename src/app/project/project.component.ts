@@ -16,12 +16,12 @@ export class ProjectComponent implements AfterViewInit {
   projects = [
     {
       title: 'Kivu Agence',
-      category: 'UI UX',
+      category: 'Site web',
       image: '/images/kivuPNG.PNG',
     },
     {
       title: 'Lacasa immo App',
-      category: 'App Design',
+      category: 'Application web',
       image: '/images/lacasa.PNG',
     },
     {
