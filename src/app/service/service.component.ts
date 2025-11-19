@@ -15,9 +15,9 @@ gsap.registerPlugin(ScrollTrigger);
 export class ServiceComponent  implements AfterViewInit {
   services = [
     {
-      title: 'UI/UX',
+      title: 'full Stack App',
       icon: '/images/uiux.png',
-      description: 'Création d’expériences utilisateurs intuitives et esthétiques.',
+      description: 'Création des applications web complète.',
     },
     {
       title: 'Web Design',

@@ -18,6 +18,7 @@ export class AboutComponent implements OnInit {
     { name: 'Angular', level: 85 },
     { name: 'React', level: 80 },
     { name: 'TailwindCSS', level: 95 },
+    { name: 'Next js', level: 50 },
     { name: 'Figma', level: 90 }
   ];
 

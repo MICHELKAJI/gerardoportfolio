@@ -15,17 +15,17 @@ export class ProjectComponent implements AfterViewInit {
 
   projects = [
     {
-      title: 'AirCalling Landing Page Design',
+      title: 'Kivu Agence',
       category: 'UI UX',
       image: '/images/kivuPNG.PNG',
     },
     {
-      title: 'Crypto App UI',
+      title: 'Lacasa immo App',
       category: 'App Design',
       image: '/images/lacasa.PNG',
     },
     {
-      title: 'Restaurant Website',
+      title: 'Sparkcode Agence',
       category: 'Website Design',
       image: '/images/Sparkcode.PNG',
     },
